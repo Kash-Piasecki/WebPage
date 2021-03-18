@@ -75,6 +75,7 @@ body{
   background-color: var(--first-color-lighten);
   color: var(--text-color);
   line-height: 1.6;
+  height: 2000px;
 }
 
 h1,h2,h3,ul,p{
@@ -127,9 +128,6 @@ img{
 .bd-container{
     max-width: 1024px;
     width: calc(100% - 2rem);
-     /* TUTAJ */
-    /* position: absolute; */
-    height: var(--header-height);
     margin-left: var(--mb-2);
     margin-right: var(--mb-2);
 }
@@ -141,10 +139,11 @@ img{
 
 .l-header{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    /* background-color: var(--first-color-black); */
+    z-index: var(--z-fixed);
+    background-color: #000;
 }
 
 /*===== NAV =====*/
@@ -162,40 +161,36 @@ img{
         top: -100%;
         left: 0;
         width: 100%;
-        padding-top: 3rem;
+        padding-top: 1.5rem;
         text-align: center;
-        background-color: var(--first-color-black);
+        background-color: #000;
         transition: var(--transition-fast);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
         border-radius: 0 0 1rem 1rem;
         z-index: var(--z-fixed);
     }
 }
 
-.fa-bars {
-    position: fixed;
-}
-.fa-bars:hover{
-    transition: var(--transition-fast);
-    cursor:pointer;
-    color: white;
-}
-
 .nav__item{
     margin-bottom: var(--mb-3);
 }
+
 .nav__link{
+    color: var(--first-color-lighten);
     transition: var(--transition-fast);
 }
 
+.nav__link:hover{
+    color: var(--first-color-light);
+}
 
 .nav__logo, .nav__toggle {
-    color: var(--first-color);
-    z-index: 100;
+    color: var(--first-color-lighten);
 }
 
 .nav_toggle{
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 /* Show menu */
@@ -217,23 +212,23 @@ img{
     left: 0;
     width: 65%;
     height: 3px;
-    background-color: var(--first-color-black);
+    background-color: var(--first-color-light);
 }
 
 /* Change background header */
 
-.scroll-header, .nav__menu {
-    background-color: var(--first-color-black);
-    box-shadow: 2 3px 4px rgba(0,0,0,0.1);
+.scroll-header {
+    background-color: var(--first-color-lighten);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
 .scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
-    background-color: var(--first-color-black);
-    color: var(--text-color);
+    color: var(--first-color-dark);
 }
 
-.nav__link:hover{
-    color: var(--first-color-white);
+.scroll-header .nav__menu{
+    background-color: var(--first-color-lighten);
+}
 
 /*===== SCROLL TOP =====*/
 
@@ -346,7 +341,7 @@ img{
     top: 20rem;
     overflow: visible;
     
-}
+} 
 
 /*===== QUALIFICATION =====*/
 
