@@ -253,7 +253,7 @@ img{
 
 .scrolltop__icon{
     font-size: 2rem;
-    color: var(--text-color);
+    color: var(--first-color-lighten);
 }
 
 /* Show scroll top */
