@@ -1,4 +1,4 @@
-/* SHOW MENU */
+/* ======SHOW MENU====== */
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId);
     const nav = document.getElementById(navId);
@@ -9,42 +9,44 @@ const showMenu = (toggleId, navId) => {
         })
     }
 }
-     
+
 showMenu("nav-toggle", "nav-menu");
 
-/* REMOVE WHEN CLICKEN ON MENU MOBILE */
+/* ======HIDE MENU===== */
 const navLink = document.querySelectorAll(".nav__link");
 
-function linkAction() {
+function hideMenu() {
     const navMenu = document.getElementById("nav-menu");
     navMenu.classList.remove("show-menu");
 }
 
-navLink.forEach(x => x.addEventListener("click", linkAction));
+navLink.forEach(x => x.addEventListener("click", hideMenu));
 
-/* SCROLL SECTIONS ACTIVE LINK */
+/* ======SCROLL SECTIONS ACTIVE LINK====== */
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
     const scrollY = window.pageYOffset;
 
     sections.forEach(current => {
-        const sectionHeight = current.offsetTop - 50;
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute("id");
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector(".nav__menu a href*=" + sectionId + "]").classList.add("active-link");
+            document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.add("active-link");
         } else {
-            document.querySelector(".nav__menu a href*=" + sectionId + "]").classList.remove("active-link");
+            document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.remove("active-link");
         }
     })
-    window.addEventListener("scroll", scrollActive);
 }
 
-/* CHANGE BACKGROUND HEADER */
+window.addEventListener("scroll", scrollActive);
+
+/* =====CHANGE BACKGROUND HEADER===== */
 function scrollHeader() {
     const header = document.getElementById("header");
-    if (this.scrollY >= 270)
+    if (this.scrollY >= 200)
         header.classList.add("scroll-header");
     else
         header.classList.remove("scroll-header");
