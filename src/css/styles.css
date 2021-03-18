@@ -313,24 +313,67 @@ img{
     width: 240px;
 }
 
+.home__social{
+    display: flex;
+    flex-direction: column;
+}
+
+.home__social-icon{
+    width: max-content;
+    font-size: 1.3rem;
+    margin-bottom: var(--mb-2);
+    color: var(--first-color-lighten);
+    z-index: var(--z-normal);
+    transition: var(--transition-fast);
+}
+
+.home__social-icon:hover{
+    color: var(--first-color-light)
+}
+
+
 /*BUTTONS*/
 
-/* .button{
+.button{
     display: inline-block;
-    padding: .75rem 1rem;
     background-color: var(--first-color);
+    color: var(--first-color-lighten);
+    padding: .75rem 1rem;
     border-radius: .25rem;
-    border: solid 2px var(--first-color-dark);
     transition: var(--transition-fast);
 }
 
 .button:hover{
-    background-color: var(--first-color-white);
+    background-color: var(--first-color-dark);
     cursor: pointer;
-} */
+}
+
+.button-light{
+    background-color: var(--first-color-light);
+}
 
 /*===== ABOUT =====*/
 
+.about__data{
+    text-align: center;
+}
+
+.about__description span {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--first-color);
+}
+
+.about__number{
+    font-size: var(--h1-font-size);
+    color: var(--first-color);
+    display: block;
+}
+
+.about__img{
+    justify-self: center;
+    width: 220px;
+}
 /*===== QUALIFICATION =====*/
 
 
