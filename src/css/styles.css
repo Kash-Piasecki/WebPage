@@ -6,10 +6,10 @@
   --header-height: 3rem;
 
   /*===== Colors =====*/
-  --first-color: #3E0E12;
-  --first-color-dark: #2F0A0D;
-  --text-color: #524748;
-  --first-color-light: #7B6F71;
+  --first-color: #252525;
+  --first-color-dark: #000;
+  --text-color: #929292;
+  --first-color-light: #818080;
   --first-color-lighten: #FBF9F9;
 
   /*===== Font and typography =====*/
@@ -176,12 +176,12 @@ img{
 }
 
 .nav__link{
-    color: var(--first-color-lighten);
     transition: var(--transition-fast);
+    color:var(--first-color-light);
 }
 
 .nav__link:hover{
-    color: var(--first-color-light);
+    color: var(--first-color-lighten);
 }
 
 .nav__logo, .nav__toggle {
@@ -222,8 +222,9 @@ img{
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.scroll-header .nav__logo, .scroll-header .nav__toggle, .nav__link {
-    color: var(--first-color-dark);
+.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
+    color: var(--first-color-light);
+    color: var(--first-color);
 }
 
 .scroll-header .nav__menu{
@@ -329,7 +330,7 @@ img{
 }
 
 .home__social-icon:hover{
-    color: var(--first-color-light)
+    color: var(--first-color-light);
 }
 
 
@@ -345,7 +346,8 @@ img{
 }
 
 .button:hover{
-    background-color: var(--first-color-dark);
+    background-color: var(--first-color-lighten);
+    color: var(--first-color);
     cursor: pointer;
 }
 
@@ -507,6 +509,10 @@ img{
 .contact__button{
     cursor:pointer;
     border:none;
+}
+
+.contact__button:hover{
+    background-color: var(--text-color);
 }
 
 /*===== FOOTER =====*/
