@@ -188,7 +188,7 @@ img{
     color: var(--first-color-lighten);
 }
 
-.nav_toggle{
+.nav__toggle{
     font-size: 1.3rem;
     cursor: pointer;
 }
@@ -222,7 +222,7 @@ img{
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
+.scroll-header .nav__logo, .scroll-header .nav__toggle, .nav__link {
     color: var(--first-color-dark);
 }
 
@@ -252,7 +252,8 @@ img{
 }
 
 .scrolltop__icon{
-    font-size: 2rem;
+    /* font-size: var(--normal-font-size); */
+    /* padding: 0.75rem; */
     color: var(--first-color-lighten);
 }
 
@@ -411,7 +412,7 @@ img{
 }
 
 .qualification__work{
-    display:block;
+    display:block;   
 }
 
 /*===== SERVICES =====*/
@@ -459,10 +460,15 @@ img{
     margin: var(--mb-1);
 }
 
-.contact__docial{
+.contact__social{
     color: var(--first-color-light);
     font-size: 1.25rem;
     margin: 0 var(--mb-1);
+    transition: var(--transition-fast);
+}
+
+.contact__social:hover{
+    color: var(--first-color-dark);
 }
 
 .contact__box:hover{
@@ -471,14 +477,14 @@ img{
 
 /*===== CONTACT FORM =====*/
 
-.contact_inputs{
+.contact__inputs{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 1rem;
 }
 
 .contact__input, .contact__button{
-    outline: none;
+    outline: none; 
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
@@ -502,7 +508,46 @@ img{
     cursor:pointer;
     border:none;
 }
+
 /*===== FOOTER =====*/
 
+.footer{
+    background-color: var(--first-color-dark);
+    color: var(--first-color-lighten);
+    text-align: center;
+}
 
+.footer__container{
+    padding: 3rem;
+}
+
+.footer__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-semi-bold);
+}
+
+.footer__description{
+    margin-bottom: var(--mb-3);
+}
+
+.footer__social{
+    margin-bottom: var(--mb-6);
+}
+
+.footer__link{
+    font-size: 1.4rem;
+    color: var(--first-color-lighten);
+    margin: 0 var(--mb-1);
+    transition: var(--transition-fast);
+}
+
+.footer__link:hover{
+    color: var(--first-color-light)
+}
+
+.footer__copy{
+    font-size: var(--smaller-font-size);
+    color: var(--first-color-light);
+}
 /*===== MEDIA QUERIES =====*/
