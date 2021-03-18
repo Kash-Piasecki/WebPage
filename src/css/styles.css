@@ -10,7 +10,7 @@
     --first-color-dark: #000;
     --text-color: #929292;
     --first-color-light: #818080;
-    --first-color-lighten: #FBF9F9;
+    --first-color-lighten: #f7f7f7;
     /*===== Font and typography =====*/
     --body-font: 'Poppins', sans-serif;
     --biggest-font-size: 2.5rem;
@@ -510,6 +510,11 @@ img {
 
 /*===== FOOTER =====*/
 
+.goodbye__img{
+    max-width: 1024px;
+    margin: auto;
+}
+
 .footer {
     background-color: var(--first-color-dark);
     color: var(--first-color-lighten);
@@ -638,7 +643,7 @@ img {
 @media screen and (min-width: 1024px){
 
     .home__img img{
-        width: 550px;
+        width: 450px;
     }
 
     .bd-container{
