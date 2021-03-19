@@ -1,17 +1,32 @@
+let alertMessage = [];
+
+/* ======SEND MESSAGE====== */
+function sendEmail() {
+    if (validate())
+        alert("Email succesfully sent.")
+    else{
+        alert(alertMessage.join(""));
+        alertMessage = [];
+    }
+}
+
 /* ======VALIDATE CALLBACKS ====== */
 function validate() {
-    let alertMessage = [];
     alertMessage.push("Please enter valid:\n");
-    if (!validateName())
+    let isValidName = validateName();
+    if (!isValidName)
         alertMessage.push("* Name\n");
-    if (!validateSurname())
+    let isValidSurname = validateSurname();
+    if (!isValidSurname)
         alertMessage.push("* Surname\n");
-    if (!validatePhoneNumber())
+    let isValidPhone = validatePhoneNumber();
+    if (!isValidPhone)
         alertMessage.push("* Phone Number\n");
-    if (!validateEmail())
+    let isValidEmail = validateEmail();
+    if (!isValidEmail)
         alertMessage.push("* Email Address\n");
     alertMessage.push("Thank you.\n");
-    alert(alertMessage.join(""));
+    return isValidName && isValidSurname && isValidEmail && isValidPhone;
 }
 
 /* ======VALIDATE NAME====== */
@@ -47,4 +62,4 @@ function validateEmail() {
 }
 
 const submitButton = document.getElementById("contact-submit");
-submitButton.addEventListener("click", validate);
+submitButton.addEventListener("click", sendEmail);

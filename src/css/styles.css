@@ -414,16 +414,6 @@ img {
     display: block;
 }
 
-/*===== SERVICES =====*/
-
-/*===== PROJECT IN MIND =====*/
-
-/*===== PORTFOLIO =====*/
-
-/* Active menu portfolio*/
-
-/*===== TESTIMONIAL =====*/
-
 /*===== CONTACTME =====*/
 
 .contact__container {
@@ -632,11 +622,6 @@ img {
 
     .about__description{
         text-align: initial;
-    }
-
-    .qualification__box{
-        display: flex;
-        justify-content: center;
     }
 }
 
