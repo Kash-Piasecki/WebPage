@@ -500,19 +500,10 @@ img {
 /*===== VALIDATION =====*/
 
 .contact__control {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
     position: relative;
 }
 
-.contact__control label{
-    display: inline-block;
-    margin-bottom: 5px;
-}
-
 .contact__control input {
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
     display: block;
 }
 
@@ -524,15 +515,21 @@ img {
     visibility: hidden;
 }
 
-.contact__error{
+.contact__control small {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -1rem;
+    left: 1rem;
     visibility: hidden;
 }
 
+/*===== VALIDATION SUCCESS/ERROR =====*/
+
 .contact__control.success i.fa-check-circle {
     visibility: visible;
+}
+
+.contact__control.success small {
+    visibility: hidden;
 }
 
 .contact__control.error i.fa-exclamation-circle {
@@ -540,10 +537,11 @@ img {
     color: var(--first-color);
 }
  
-.contact__error.error{
+.contact__control.error small {
     visibility: visible;
     color: var(--first-color);
 }
+
 
 /*===== FOOTER =====*/
 
