@@ -8,9 +8,8 @@
     <script src="https://kit.fontawesome.com/c056df67e8.js" crossorigin="anonymous"></script>
     <!--===== MAIN JS =====-->
     <script defer src="src/js/main.js"></script>
-    <!--===== MESSAGE JS =====-->
-    <script defer src="src/js/message.js"></script>
-
+    <!--===== CONTACT JS =====-->
+    <script defer src="src/js/contact.js"></script>
     <!--===== METADATA =====-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +57,8 @@
 
                 <!--===== SOCIAL ICONS =====-->
                 <div class="home__social">
-                    <a href="https://facebook.com/KashPiasecki" class="home__social-icon"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://facebook.com/KashPiasecki" class="home__social-icon"><i
+                            class="fab fa-facebook-square"></i></a>
                     <a href="https://github.com/KashPiasecki" class="home__social-icon"><i
                             class="fab fa-github"></i></i></a>
                 </div>
@@ -241,28 +241,37 @@
                         <i class="fas fa-comment-alt contact__icon"></i>
                         <h3 class="contact__title">Chat</h3>
                         <div>
-                            <a href="https://api.whatsapp.com/send?phone=+48662854630" class="contact__social"><i class="fab fa-whatsapp"></i></a>
-                            <a href="http://m.me/KashPiasecki" class="contact__social"><i class="fab fa-facebook-messenger"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=+48662854630" class="contact__social"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="http://m.me/KashPiasecki" class="contact__social"><i
+                                    class="fab fa-facebook-messenger"></i></a>
 
                         </div>
                     </div>
                 </div>
 
                 <!-- CONTACT FORM -->
-                <div class="contact-error"></div>
-                <form action="GET" class="contact__form" id="contact-form"></form>
+                <form action="" class="contact__form" id="contact-form"></form>
 
                 <div class="contact__inputs">
-                    <input type="text" placeholder="Name" class="contact__input" id="contact-name" maxlength="15" required>
+                    <div class="contact__control" id="contact-control">
+                        <input type="text" placeholder="Name" class="contact__input" id="contact-name" maxlength="15"
+                            required>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fas fa-exclamation-circle"></i>
+                        <small class="contact__error" id="contact-error">Error message</small>
+                    </div>
                     <input type="text" placeholder="Surname" class="contact__input" id="contact-surname" maxlength="15">
                 </div>
 
                 <div class="contact__inputs">
                     <input type="email" placeholder="Email" class="contact__input" id="contact-email" maxlength="50">
-                    <input type="text" placeholder="Phone Number" class="contact__input" id="contact-phone" maxlength="20">
+                    <input type="text" placeholder="Phone Number" class="contact__input" id="contact-phone"
+                        maxlength="20">
                 </div>
 
-                <textarea id="contact-message" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+                <textarea id="contact-message" cols="0" rows="7" placeholder="Message"
+                    class="contact__input"></textarea>
 
                 <input type="submit" value="Send Message" class="button contact__button" id="contact-submit" disabled>
                 </form>
@@ -296,8 +305,8 @@
         </footer>
 
     </main>
-        <!-- ===== GSAP ===== -->
-        <script src="src/js/gsap.min.js"></script>
+    <!-- ===== GSAP ===== -->
+    <script src="src/js/gsap.min.js"></script>
 </body>
 
 </html>

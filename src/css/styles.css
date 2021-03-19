@@ -70,7 +70,7 @@ body {
     background-color: var(--first-color-lighten);
     color: var(--text-color);
     line-height: 1.6;
-    height: 2000px;
+    cursor: default;
 }
 
 h1, h2, h3, ul, p {
@@ -249,8 +249,7 @@ img {
 }
 
 .scrolltop__icon {
-    /* font-size: var(--normal-font-size); */
-    /* padding: 0.75rem; */
+    font-size: var(--normal-font-size);
     color: var(--first-color-lighten);
 }
 
@@ -496,6 +495,54 @@ img {
 
 .contact__button:hover {
     background-color: var(--text-color);
+}
+
+/*===== VALIDATION =====*/
+
+.contact__control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.contact__control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.contact__control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+}
+
+.contact__control i {
+    position: absolute;
+    top: 1.5rem; 
+    right: 1rem;
+    vertical-align: center;
+    visibility: hidden;
+}
+
+.contact__error{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.contact__control.success i.fa-check-circle {
+    visibility: visible;
+}
+
+.contact__control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: var(--first-color);
+}
+ 
+.contact__error.error{
+    visibility: visible;
+    color: var(--first-color);
 }
 
 /*===== FOOTER =====*/
