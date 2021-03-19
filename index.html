@@ -10,6 +10,7 @@
     <script defer src="src/js/main.js"></script>
     <!--===== MESSAGE JS =====-->
     <script defer src="src/js/message.js"></script>
+
     <!--===== METADATA =====-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -248,10 +249,11 @@
                 </div>
 
                 <!-- CONTACT FORM -->
-                <form action="" class="contact__form"></form>
+                <div class="contact-error"></div>
+                <form action="GET" class="contact__form" id="contact-form"></form>
 
                 <div class="contact__inputs">
-                    <input type="text" placeholder="Name" class="contact__input" id="contact-name" maxlength="15">
+                    <input type="text" placeholder="Name" class="contact__input" id="contact-name" maxlength="15" required>
                     <input type="text" placeholder="Surname" class="contact__input" id="contact-surname" maxlength="15">
                 </div>
 
@@ -294,18 +296,8 @@
         </footer>
 
     </main>
-
-    <!-- ===== MIXITUP FILTER ===== -->
-    <script src=""></script>
-
-    <!-- ===== SWIPER JS ===== -->
-    <script src=""></script>
-
-    <!-- ===== GSAP ===== -->
-    <script src=""></script>
-
-
-
+        <!-- ===== GSAP ===== -->
+        <script src="src/js/gsap.min.js"></script>
 </body>
 
 </html>

@@ -73,7 +73,7 @@ function clearFields(){
 }
 
 const submitButton = document.getElementById("contact-submit");
-submitButton.addEventListener("click", sendEmail);
+// submitButton.addEventListener("click", sendEmail);
 
 /* ======DISABLE SEND====== */
 function sendButtonAvailabilitySwitch() {
@@ -86,7 +86,12 @@ function sendButtonAvailabilitySwitch() {
 
 }
 
-
 const message = document.getElementById("contact-message");
-console.log(message);
 message.addEventListener("input", sendButtonAvailabilitySwitch);
+
+/* ======ERROR MESSAGE====== */
+const name = document.getElementById("contact-name");
+const surname = document.getElementById("contact-surname");
+const email = document.getElementById("contact-email");
+const phone = document.getElementById("contact-phone");
+const form = document.getElementById("contact-form");
