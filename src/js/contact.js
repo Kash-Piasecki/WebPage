@@ -12,9 +12,9 @@ function sendEmail(name, email, phone, message) {
         Host: "smtp.gmail.com",
         Username: "mototestemailaddress@gmail.com",
         Password: "sbovyistkpzwxelv",
-        To: "mototestemailaddress@gmail.com",
+        To: "kash.piasecki92@gmail.com",
         From: "mototestemailaddress@gmail.com",
-        Subject: name + "sent you a message",
+        Subject: name + " sent you a message",
         Body: "Name: " + name + "\n Email: "
             + email + "\n Phone: " + phone + "\n Message: " + message,
     }).then( () => {
