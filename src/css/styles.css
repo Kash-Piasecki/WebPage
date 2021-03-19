@@ -1,6 +1,6 @@
 /*===== GOOGLE FONTS =====*/
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 
 :root {
@@ -249,6 +249,7 @@ img {
 }
 
 .scrolltop__icon {
+    padding: .75rem;
     font-size: var(--normal-font-size);
     color: var(--first-color-lighten);
 }

@@ -26,9 +26,9 @@ function sendEmail(name, email, phone, message) {
 /* ======VALIDATE NAME====== */
 function checkNameInputs(nameValue) {
     if (nameValue === '' || nameValue == null) {
-        setErrorFor(firstName, "Name cannot be blank");
+        setErrorFor(firstName, "Field cannot be blank");
     } else if (!validateName()) {
-        setErrorFor(firstName, "Name should contain only english letters")
+        setErrorFor(firstName, "Field should contain only english letters")
     } else {
         setSuccessFor(firstName);
         return true;
@@ -45,9 +45,9 @@ function validateName() {
 /* ======VALIDATE SURNAME====== */
 function checkSurnameInputs(surnameValue) {
     if (surnameValue === '' || surnameValue == null) {
-        setErrorFor(surname, "Surname cannot be blank");
+        setErrorFor(surname, "Field cannot be blank");
     } else if (!validateSurname()) {
-        setErrorFor(surname, "Surname should contain only english letters")
+        setErrorFor(surname, "Field should contain only english letters")
     } else {
         setSuccessFor(surname);
         return true;
@@ -64,9 +64,9 @@ function validateSurname() {
 /* ======VALIDATE PHONE====== */
 function checkPhoneInputs(phoneValue) {
     if (phoneValue === '' || phoneValue == null) {
-        setErrorFor(phone, "Phone number cannot be blank");
+        setErrorFor(phone, "Field cannot be blank");
     } else if (!validatePhoneNumber()) {
-        setErrorFor(phone, "Phone number should not contain any letters")
+        setErrorFor(phone, "Not a valid number")
     } else {
         setSuccessFor(phone);
         return true;
@@ -83,7 +83,7 @@ function validatePhoneNumber() {
 /* ======VALIDATE EMAIL====== */
 function checkEmailInputs(emailValue) {
     if (emailValue === '' || emailValue == null) {
-        setErrorFor(email, "Email cannot be blank");
+        setErrorFor(email, "Field cannot be blank");
     } else if (!validateEmail()) {
         setErrorFor(email, "Not a valid email address")
     } else {
