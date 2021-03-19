@@ -520,6 +520,7 @@ img {
     bottom: -1rem;
     left: 1rem;
     visibility: hidden;
+    font-size: .7rem;
 }
 
 /*===== VALIDATION SUCCESS/ERROR =====*/
@@ -667,6 +668,10 @@ img {
 
     .about__description{
         text-align: initial;
+    }
+
+    .contact__control small {
+        font-size: var(--small-font-size);
     }
 }
 
