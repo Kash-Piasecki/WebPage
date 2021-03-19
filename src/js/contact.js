@@ -7,9 +7,20 @@ const submitButton = document.getElementById("contact-submit");
 const message = document.getElementById("contact-message");
 
 /* ======SEND MESSAGE====== */
-function sendEmail() {
-    alert("Email succesfully sent.")
-    clearFields();
+function sendEmail(name, email, phone, message) {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "mototestemailaddress@gmail.com",
+        Password: "sbovyistkpzwxelv",
+        To: "mototestemailaddress@gmail.com",
+        From: "mototestemailaddress@gmail.com",
+        Subject: name + "sent you a message",
+        Body: "Name: " + name + "\n Email: "
+            + email + "\n Phone: " + phone + "\n Message: " + message,
+    }).then( () => {
+        alert("Email succesfully sent.");
+        clearFields();
+    });
 }
 
 /* ======VALIDATE NAME====== */
@@ -121,6 +132,9 @@ function checkInputs() {
     const surnameValue = surname.value;
     const emailValue = email.value;
     const phoneValue = phone.value;
+    const messageValue = message.value;
+
+    const fullName = nameValue + " " + surnameValue;
 
     let isValidName = checkNameInputs(nameValue);
     let isValidSurname = checkSurnameInputs(surnameValue);
@@ -128,13 +142,13 @@ function checkInputs() {
     let isValidPhone = checkPhoneInputs(phoneValue);
 
     if (isValidName && isValidSurname && isValidPhone && isValidEmail)
-        sendEmail();
+        sendEmail(fullName, emailValue, phoneValue, messageValue);
 }
 
 
 /* ======SET SUCCESS/ERROR====== */
 function setErrorFor(input, message) {
-    const contactControl = input.parentElement; 
+    const contactControl = input.parentElement;
     const small = contactControl.querySelector("small");
     small.innerText = message;
     contactControl.className = "contact__control error";
