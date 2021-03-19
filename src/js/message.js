@@ -4,7 +4,7 @@ let alertMessage = [];
 function sendEmail() {
     if (validate())
         alert("Email succesfully sent.")
-    else{
+    else {
         alert(alertMessage.join(""));
         alertMessage = [];
     }
@@ -63,3 +63,19 @@ function validateEmail() {
 
 const submitButton = document.getElementById("contact-submit");
 submitButton.addEventListener("click", sendEmail);
+
+/* ======DISABLE SEND====== */
+function sendButtonAvailabilitySwitch() {
+    let submitButton = document.getElementById('contact-submit');
+    let messageBox = document.getElementById("contact-message");
+    if (messageBox.value === "")
+        submitButton.disabled = true;
+    else
+        submitButton.disabled = false;
+
+}
+
+
+const message = document.getElementById("contact-message");
+console.log(message);
+message.addEventListener("input", sendButtonAvailabilitySwitch);
