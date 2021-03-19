@@ -28,8 +28,6 @@
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Service</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact me</a></li>
                 </ul>
             </div>
@@ -56,8 +54,8 @@
                 <!--===== SOCIAL ICONS =====-->
                 <div class="home__social">
                     <a href="#" class="home__social-icon"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#" class="home__social-icon"><i class="fab fa-github"></i></i></a>
-                    <a href="#" class="home__social-icon"><i class="fas fa-burn"></i></a>
+                    <a href="https://github.com/KashPiasecki" class="home__social-icon"><i
+                            class="fab fa-github"></i></i></a>
                 </div>
 
                 <div class="home__img">
@@ -258,21 +256,21 @@
                 </div>
 
                 <!-- CONTACT FORM -->
-                <form action="" class="contact__form">
+                <form action="" class="contact__form"></form>
 
-                    <div class="contact__inputs">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="text" placeholder="Surname" class="contact__input">
-                    </div>
+                <div class="contact__inputs">
+                    <input type="text" placeholder="Name" class="contact__input" id="contact-name" maxlength="15">
+                    <input type="text" placeholder="Surname" class="contact__input" id="contact-surname" maxlength="15">
+                </div>
 
-                    <div class="contact__inputs">
-                        <input type="email" placeholder="Email" class="contact__input">
-                        <input type="number" placeholder="Number" class="contact__input">
-                    </div>
+                <div class="contact__inputs">
+                    <input type="email" placeholder="Email" class="contact__input" id="contact-email" maxlength="50">
+                    <input type="text" placeholder="Number" class="contact__input" id="contact-phone" maxlength="20">
+                </div>
 
-                    <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+                <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
 
-                    <input type="submit" value="Send Message" class="button contact__button">
+                <input type="submit" value="Send Message" class="button contact__button" id="contact-submit">
                 </form>
 
             </div>
@@ -288,13 +286,15 @@
 
         <footer class="footer">
             <div class="footer__container bd-container">
-                <h1 class="footer__title">Łukasz Piasecki</h1>
-                <p class="footer__description">The master of copy/paste</p>
+                <h1 class="footer__title">A single step</h1>
+                <p class="footer__description">My journey of a thousand miles just began</p>
 
                 <div class="footer__social">
-                    <a href="#" class="footer__link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="footer__link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="footer__link"><i class="fab fa-spotify"></i></a>
+                    <a href="www.linkedin.com/in/łukasz-p-6226501a8" class="footer__link"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/KashPiasecki" class="footer__link"><i class="fab fa-github"></i></a>
+                    <a href="https://open.spotify.com/playlist/6n6pjI5wC7kHbFKPrmt4qS?si=uKLQsu-FQGWReR_lI3lbWA"
+                        class="footer__link"><i class="fab fa-spotify"></i></a>
                 </div>
 
                 <p class="footer__copy">&#169; Motorola Solutions</p>
@@ -314,6 +314,10 @@
 
     <!--===== MAIN JS =====-->
     <script src="src/js/main.js"></script>
+
+    <!--===== VALIDATION JS =====-->
+    <script src="src/js/validation.js"></script>
+
 </body>
 
 </html>
